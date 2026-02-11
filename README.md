@@ -1,17 +1,39 @@
-
-# Lead Training
+# Lead Training Project
 
 ![Build Status](https://github.com/velindoychinov/lead-training/actions/workflows/maven-ci.yml/badge.svg)
 
-This is a Spring Boot training project demonstrating a layered REST architecture
-(controllers, services, repositories), DTO mapping, and integration testing with
-MockMvc and H2 in-memory database.
+This is a Spring Boot training project demonstrating REST APIs, layered architecture,
+integration tests, and H2 in‑memory DB.
 
-The project contains:
-- CRUD controllers (Course, StudyGroup, Student, etc.)
-- Registration endpoints (student ↔ course, student ↔ group, teacher ↔ course, teacher ↔ group)
-- Reporting endpoints
-- Integration tests using real services and repositories
+---
+
+## 🚀 Features
+
+- 🌐 **Swagger UI**: Interactive API documentation and playground
+  http://localhost:8080/swagger-ui/index.html
+
+- 🛠 **H2 Console** (in‑memory database / file):  
+  http://localhost:8080/h2-console
+
+- 🧪 **Integration Tests** using MockMvc and H2  
+- 💡 Clean service, repository, controller separation
+
+---
+
+## 📌 Requirements
+
+- Java 17+
+- Maven 3.9+
+
+---
+
+## 🛠 Installation
+
+Build the project:
+
+```bash
+mvn clean install
+```
 
 ---
 
