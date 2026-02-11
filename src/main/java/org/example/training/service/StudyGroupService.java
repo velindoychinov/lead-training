@@ -5,7 +5,6 @@ import org.example.training.dto.filter.StudyGroupFilter;
 import org.example.training.model.StudyGroup;
 import org.example.training.repository.StudyGroupRepository;
 import org.example.training.utils.ServiceUtils;
-import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -16,8 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static org.example.training.utils.ServiceUtils.anyLike;
-import static org.example.training.utils.ServiceUtils.eq;
-
 @Service
 @Transactional
 @RequiredArgsConstructor

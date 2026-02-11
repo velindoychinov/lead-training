@@ -5,7 +5,6 @@ import org.example.training.dto.filter.CourseFilter;
 import org.example.training.model.Course;
 import org.example.training.repository.CourseRepository;
 import org.example.training.utils.ServiceUtils;
-import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;

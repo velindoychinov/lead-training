@@ -22,7 +22,6 @@ import java.util.Map;
 public class ReportController {
 
   private final ReportService reportService;
-  private final StudentQueryService studentQueryService;
 
   @Operation(operationId = "countStudents")
   @GetMapping(
