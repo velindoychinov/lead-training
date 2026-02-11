@@ -1,5 +1,6 @@
 package org.example.training.service;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.training.dto.filter.CourseFilter;
 import org.example.training.model.Course;
@@ -11,6 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
@@ -19,16 +21,17 @@ import static org.example.training.utils.ServiceUtils.*;
 @Service
 @Transactional
 @RequiredArgsConstructor
+@Validated
 public class CourseService {
 
   private final CourseRepository courseRepository;
 
-  public Course createCourse(Course course) {
+  public Course createCourse(@Valid Course course) {
     course.setCourseId(null);
     return courseRepository.save(course);
   }
 
-  public Course updateCourse(Course changes) {
+  public Course updateCourse(@Valid Course changes) {
     Course entity = courseRepository
       .findById(changes.getCourseId())
       .orElseThrow(() -> new IllegalStateException("Course not found"));

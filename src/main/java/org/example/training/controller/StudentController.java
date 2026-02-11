@@ -1,5 +1,6 @@
 package org.example.training.controller;
 
+import jakarta.validation.Valid;
 import org.example.training.dto.StudentDto;
 import org.example.training.dto.filter.StudentFilter;
 import org.example.training.model.Student;
@@ -25,13 +26,13 @@ public class StudentController implements CrudController<StudentDto, StudentFilt
 
   @Operation(operationId = "createStudent")
   @Override
-  public StudentDto create(@RequestBody StudentDto studentDto) {
+  public StudentDto create(@Valid @RequestBody StudentDto studentDto) {
     return toDto(studentService.createStudent(toEntity(studentDto)));
   }
 
   @Operation(operationId = "updateStudent")
   @Override
-  public StudentDto update(@PathVariable int id, @RequestBody StudentDto studentDto) {
+  public StudentDto update(@PathVariable int id, @Valid @RequestBody StudentDto studentDto) {
     Student student = toEntity(studentDto);
     student.setStudentId(id);
     return toDto(studentService.updateStudent(student));

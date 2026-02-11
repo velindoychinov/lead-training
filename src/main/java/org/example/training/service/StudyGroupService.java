@@ -1,5 +1,6 @@
 package org.example.training.service;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.training.dto.filter.StudyGroupFilter;
 import org.example.training.model.StudyGroup;
@@ -11,6 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
@@ -18,16 +20,17 @@ import static org.example.training.utils.ServiceUtils.anyLike;
 @Service
 @Transactional
 @RequiredArgsConstructor
+@Validated
 public class StudyGroupService {
 
   private final StudyGroupRepository studyGroupRepository;
 
-  public StudyGroup createStudyGroup(StudyGroup studyGroup) {
+  public StudyGroup createStudyGroup(@Valid StudyGroup studyGroup) {
     studyGroup.setGroupId(null);
     return studyGroupRepository.save(studyGroup);
   }
 
-  public StudyGroup updateStudyGroup(StudyGroup changes) {
+  public StudyGroup updateStudyGroup(@Valid StudyGroup changes) {
     StudyGroup entity = studyGroupRepository
       .findById(changes.getGroupId())
       .orElseThrow(() -> new IllegalStateException("StudyGroup not found"));

@@ -2,6 +2,7 @@ package org.example.training.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.training.dto.StudyGroupDto;
 import org.example.training.dto.filter.StudyGroupFilter;
@@ -23,13 +24,13 @@ public class StudyGroupController implements CrudController<StudyGroupDto, Study
 
   @Operation(operationId = "createStudyGroup")
   @Override
-  public StudyGroupDto create(@RequestBody StudyGroupDto studyGroupDto) {
+  public StudyGroupDto create(@Valid @RequestBody StudyGroupDto studyGroupDto) {
     return toDto(studyGroupService.createStudyGroup(toEntity(studyGroupDto)));
   }
 
   @Operation(operationId = "updateStudyGroup")
   @Override
-  public StudyGroupDto update(@PathVariable int id, @RequestBody StudyGroupDto studyGroupDto) {
+  public StudyGroupDto update(@PathVariable int id, @Valid @RequestBody StudyGroupDto studyGroupDto) {
     StudyGroup studyGroup = toEntity(studyGroupDto);
     studyGroup.setGroupId(id);
     return toDto(studyGroupService.updateStudyGroup(studyGroup));

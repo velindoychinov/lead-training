@@ -1,25 +1,28 @@
 package org.example.training.service;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.training.model.Teacher;
 import org.example.training.repository.TeacherRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
 @Service
 @Transactional
 @RequiredArgsConstructor
+@Validated
 public class TeacherService {
   
   private final TeacherRepository teacherRepository;
 
-  public Teacher createTeacher(Teacher teacher) {
+  public Teacher createTeacher(@Valid Teacher teacher) {
     teacher.setTeacherId(null);
     return teacherRepository.save(teacher);
   }
 
-  public Teacher updateTeacher(Teacher changes) {
+  public Teacher updateTeacher(@Valid Teacher changes) {
     Teacher entity = teacherRepository
       .findById(changes.getTeacherId())
       .orElseThrow(() -> new IllegalStateException("Teacher not found"));
