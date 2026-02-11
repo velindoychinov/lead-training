@@ -1,7 +1,7 @@
 
 # Lead Training
 
-![Build Status](https://github.com/velindoychinov/lead-training/actions/workflows/build.yml/badge.svg)
+![Build Status](https://github.com/velindoychinov/lead-training/actions/workflows/maven-ci.yml/badge.svg)
 
 This is a Spring Boot training project demonstrating a layered REST architecture
 (controllers, services, repositories), DTO mapping, and integration testing with
