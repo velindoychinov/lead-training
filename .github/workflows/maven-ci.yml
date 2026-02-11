@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -34,11 +34,15 @@ jobs:
 
       # 4. Build project and run tests with JaCoCo coverage
       - name: Build and run tests with coverage
-        run: mvn clean verify
+        run: mvn clean verify -B
 
-      # 5. Upload JaCoCo coverage report to Codecov (optional)
+      # 5. Debug: check that JaCoCo XML exists
+      - name: List JaCoCo report files
+        run: ls -l target/jacoco
+
+      # 6. Upload JaCoCo coverage report to Codecov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
-          files: target/site/jacoco/jacoco.xml
+          files: target/jacoco/jacoco.xml
           fail_ci_if_error: true
