@@ -117,25 +117,28 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.14</version>
                 <executions>
+                    <!-- Prepares the agent before tests -->
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+
+                    <!-- Generate XML report after tests -->
                     <execution>
                         <id>report</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/jacoco</outputDirectory>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <outputDirectory>${project.build.directory}/jacoco</outputDirectory>
-                    <dataFile>${project.build.directory}/jacoco/jacoco.exec</dataFile>
-                </configuration>
             </plugin>
+
 
         </plugins>
     </build>
