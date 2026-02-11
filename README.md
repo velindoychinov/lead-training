@@ -1,6 +1,7 @@
 # Lead Training Project
 
 ![Build](https://github.com/velindoychinov/lead-training/actions/workflows/java-ci.yml/badge.svg?branch=main)
+
 [![Coverage](https://codecov.io/gh/velindoychinov/lead-training/branch/main/graph/badge.svg)](https://codecov.io/gh/velindoychinov/lead-training)
 
 
