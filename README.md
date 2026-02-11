@@ -1,6 +1,6 @@
 # Lead Training Project
 
-![Build](https://github.com/velindoychinov/lead-training/actions/workflows/java-ci.yml/badge.svg?branch=main)
+[![Build](https://github.com/velindoychinov/lead-training/actions/workflows/java-ci.yml/badge.svg?branch=main)](https://github.com/velindoychinov/lead-training/actions/workflows/java-ci.yml)
 [![Coverage](https://codecov.io/gh/velindoychinov/lead-training/branch/main/graph/badge.svg)](https://codecov.io/gh/velindoychinov/lead-training)
 
 This is a Spring Boot training project demonstrating REST APIs, layered architecture,
