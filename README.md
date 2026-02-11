@@ -1,7 +1,8 @@
 # Lead Training Project
 
-![Build Status](https://github.com/velindoychinov/lead-training/actions/workflows/maven-ci.yml/badge.svg)
+![Build](https://github.com/velindoychinov/lead-training/actions/workflows/java-ci.yml/badge.svg?branch=main)
 [![Coverage](https://codecov.io/gh/velindoychinov/lead-training/branch/main/graph/badge.svg)](https://codecov.io/gh/velindoychinov/lead-training)
+
 
 This is a Spring Boot training project demonstrating REST APIs, layered architecture,
 integration tests, and H2 in‑memory DB.
