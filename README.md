@@ -7,7 +7,7 @@ MockMvc and H2 in-memory database.
 
 The project contains:
 - CRUD controllers (Course, StudyGroup, Student, etc.)
-- Registration endpoints (student ↔ course, student ↔ group)
+- Registration endpoints (student ↔ course, student ↔ group, teacher ↔ course, teacher ↔ group)
 - Reporting endpoints
 - Integration tests using real services and repositories
 
