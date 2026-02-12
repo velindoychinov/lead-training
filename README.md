@@ -53,6 +53,33 @@ mvn clean install
 
 ## How to run
 
+# Demo - How to run your project only with Docker (no local checkout)
+
+1. Create an empty folder
+```bash
+mkdir lead-training-docker
+cd lead-training-docker
+```
+
+2. Build the image
+```bash
+docker build -t lead-training .
+```
+
+3. Run the container
+```bash
+docker run -p 8080:8080 lead-training
+```
+
+Your application will be available at:
+
+```bash
+http://localhost:8080
+```
+
+---
+# Dev
+
 ```bash
 mvn spring-boot:run
 ```
