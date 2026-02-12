@@ -53,7 +53,7 @@ mvn clean install
 
 ## How to run
 
-# Demo - How to run your project only with Docker (no local checkout)
+### Demo - How to run your project only with Docker (no local checkout)
 
 1. Create an empty folder
 ```bash
@@ -78,7 +78,7 @@ http://localhost:8080
 ```
 
 ---
-# Dev
+### Dev
 
 ```bash
 mvn spring-boot:run
