@@ -53,7 +53,7 @@ mvn clean install
 
 ## How to run
 
-### Demo - How to run the project only with Docker (no local checkout)
+### Demo - How to run the project only with Docker (git, maven, java in container)
 
 1. Create an empty folder
 ```bash
