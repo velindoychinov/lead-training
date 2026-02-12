@@ -11,10 +11,13 @@ integration tests, and H2 in‑memory DB.
 ## 🚀 Features
 
 - 🌐 **Swagger UI**: Interactive API documentation and playground:
+```
   http://localhost:8080/swagger-ui/index.html
-
-- 🛠 **H2 Console** (in‑memory database / file):  
+```
+- 🛠 **H2 Console** (in‑memory database / file):
+``` 
   http://localhost:8080/h2-console
+```
 
 - 🧪 **Integration Tests** using MockMvc and H2  
 - 💡 Clean service, repository, controller separation
