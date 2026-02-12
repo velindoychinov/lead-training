@@ -12,10 +12,9 @@ ARG REPO_REF
 WORKDIR /build
 RUN apt-get update && apt-get install -y git
 
-RUN git clone --branch ${REPO_REF} ${REPO_URL} .
-
-RUN ./mvnw -B clean package -DskipTests
-
+RUN git clone --branch ${REPO_REF} ${REPO_URL} . \
+    && chmod +x mvnw \
+    && ./mvnw -B clean package -DskipTests
 
 FROM eclipse-temurin:17-jre
 WORKDIR /app
