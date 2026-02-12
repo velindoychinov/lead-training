@@ -10,7 +10,7 @@ integration tests, and H2 in‑memory DB.
 
 ## 🚀 Features
 
-- 🌐 **Swagger UI**: Interactive API documentation and playground
+- 🌐 **Swagger UI**: Interactive API documentation and playground:
   http://localhost:8080/swagger-ui/index.html
 
 - 🛠 **H2 Console** (in‑memory database / file):  
@@ -61,12 +61,20 @@ mkdir lead-training-docker
 cd lead-training-docker
 ```
 
-2. Build the image
+2. Downlaod the project Dockerfile:
+
+👉 The file must be named exactly:
+```
+Dockerfile
+```
+👉 and must NOT have any extension (for example: Dockerfile.txt).
+   
+3. Build the image
 ```bash
 docker build -t lead-training .
 ```
 
-3. Run the container
+4. Run the container
 ```bash
 docker run -p 8080:8080 lead-training
 ```
